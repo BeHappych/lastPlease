@@ -84,7 +84,7 @@ func deleteById(c *gin.Context) {
 // @Produce          json
 // @Param            updateList body List true "List"
 // @Success          200 {array} List
-// @Router           /lists{id} [PUT]
+// @Router           /lists{updateList.id} [PUT]
 func updateById(c *gin.Context) {
 	id := c.Param("id")
 	var updateList List

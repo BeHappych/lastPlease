@@ -64,7 +64,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/lists{id}": {
+        "/lists{updateList.id}": {
             "put": {
                 "description": "Update list",
                 "consumes": [
