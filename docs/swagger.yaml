@@ -48,8 +48,8 @@ paths:
       produces:
       - application/json
       responses:
-        "200":
-          description: OK
+        "204":
+          description: No Content
           schema:
             items:
               $ref: '#/definitions/main.List'
