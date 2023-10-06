@@ -41,7 +41,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/lists/id": {
+        "/lists/{id}": {
             "delete": {
                 "description": "Delete list",
                 "consumes": [
