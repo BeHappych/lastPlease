@@ -9,6 +9,8 @@ import (
 	_ "github.com/lib/pq"
 
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 type List struct {
@@ -19,6 +21,14 @@ type List struct {
 }
 
 var database *sql.DB
+
+// @Summary          List tables
+// @Description      get lists
+// @Accept           json
+// @Produce          json
+// @Param            lists body List true "User ID"
+// @Success          200 {array} List
+// @Router           /lists [get]
 
 func getLists(c *gin.Context) {
 
@@ -72,6 +82,11 @@ func updateById(c *gin.Context) {
 
 }
 
+// @title           Swagger API
+// @version         1.0
+// @description     Swagger API for Golang Project.
+// @host            localhost:8080
+
 func main() {
 
 	db, err := sql.Open("postgres", "user=user password=pass dbname=betadb sslmode=disable")
@@ -88,5 +103,8 @@ func main() {
 	router.DELETE("/lists/:id", deleteById)
 	router.PUT("/lists/:id", updateById)
 
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+
 	router.Run("localhost:8080")
+
 }
