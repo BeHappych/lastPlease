@@ -18,7 +18,19 @@ info:
   version: "1.0"
 paths:
   /lists:
-    get:
+    delete:
+      consumes:
+      - application/json
+      description: Delete list
+      parameters:
+      - description: User ID
+        in: body
+        name: id
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
       responses:
         "200":
           description: OK
@@ -26,4 +38,23 @@ paths:
             items:
               $ref: '#/definitions/main.List'
             type: array
+      summary: Delete by Id
+      tags:
+      - lists
+    get:
+      consumes:
+      - application/json
+      description: get all
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/main.List'
+            type: array
+      summary: Show all
+      tags:
+      - lists
 swagger: "2.0"

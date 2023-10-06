@@ -23,12 +23,11 @@ type List struct {
 
 var database *sql.DB
 
-// @Summary          List tables
-// @Description      get lists
+// @Summary          Show all
+// @Description      get all
 // @Tags             lists
 // @Accept           json
 // @Produce          json
-
 // @Success          200 {array} List
 // @Router           /lists [get]
 func getLists(c *gin.Context) {
@@ -64,6 +63,14 @@ func postList(c *gin.Context) {
 	c.IndentedJSON(http.StatusCreated, newAlbum)
 }
 
+// @Summary          Delete by Id
+// @Description      Delete list
+// @Tags             lists
+// @Accept           json
+// @Produce          json
+// @Param            id body string true "User ID"
+// @Success          200 {array} List
+// @Router           /lists [delete]
 func deleteById(c *gin.Context) {
 	id := c.Param("id")
 	database.Exec("delete from Lists where id = $1", id)

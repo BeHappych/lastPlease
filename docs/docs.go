@@ -17,6 +17,52 @@ const docTemplate = `{
     "paths": {
         "/lists": {
             "get": {
+                "description": "get all",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "lists"
+                ],
+                "summary": "Show all",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/main.List"
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete list",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "lists"
+                ],
+                "summary": "Delete by Id",
+                "parameters": [
+                    {
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
