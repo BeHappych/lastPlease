@@ -70,7 +70,7 @@ func postList(c *gin.Context) {
 // @Produce          json
 // @Param            id path string true "List ID"
 // @Success          200 {array} List
-// @Router           /lists/:id [delete]
+// @Router           /lists/id [delete]
 func deleteById(c *gin.Context) {
 	id := c.Param("id")
 	database.Exec("delete from Lists where id = $1", id)
