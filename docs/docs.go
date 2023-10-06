@@ -33,6 +33,35 @@ const docTemplate = `{
                         "description": "OK"
                     }
                 }
+            },
+            "post": {
+                "description": "Add new list",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "lists"
+                ],
+                "summary": "New list",
+                "parameters": [
+                    {
+                        "description": "List",
+                        "name": "newList",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/main.List"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
             }
         },
         "/lists/{id}": {

@@ -30,6 +30,25 @@ paths:
       summary: Show all
       tags:
       - lists
+    post:
+      consumes:
+      - application/json
+      description: Add new list
+      parameters:
+      - description: List
+        in: body
+        name: newList
+        required: true
+        schema:
+          $ref: '#/definitions/main.List'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: New list
+      tags:
+      - lists
   /lists/{id}:
     delete:
       consumes:

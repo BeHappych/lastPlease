@@ -52,15 +52,23 @@ func getLists(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, lists)
 }
 
+// @Summary          New list
+// @Description      Add new list
+// @Tags             lists
+// @Accept           json
+// @Produce          json
+// @Success          200
+// @Param            newList body List true "List"
+// @Router           /lists [post]
 func postList(c *gin.Context) {
-	var newAlbum List
+	var newList List
 
-	if err := c.BindJSON(&newAlbum); err != nil {
+	if err := c.BindJSON(&newList); err != nil {
 		return
 	}
-	database.Exec("insert into Lists (Full_name, Birthday, Address) values ($1, $2, $3)", newAlbum.Full_name, newAlbum.Birthday, newAlbum.Address)
+	database.Exec("insert into Lists (Full_name, Birthday, Address) values ($1, $2, $3)", newList.Full_name, newList.Birthday, newList.Address)
 
-	c.IndentedJSON(http.StatusCreated, newAlbum)
+	c.IndentedJSON(http.StatusCreated, newList)
 }
 
 // @Summary          Delete by Id
