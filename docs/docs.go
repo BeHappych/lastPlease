@@ -64,8 +64,8 @@ const docTemplate = `{
                     }
                 ],
                 "responses": {
-                    "404": {
-                        "description": "Not Found",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "type": "string"
                         }

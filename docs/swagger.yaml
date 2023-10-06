@@ -48,8 +48,8 @@ paths:
       produces:
       - application/json
       responses:
-        "404":
-          description: Not Found
+        "200":
+          description: OK
           schema:
             type: string
       summary: Delete by Id
