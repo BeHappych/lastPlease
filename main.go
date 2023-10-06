@@ -77,6 +77,14 @@ func deleteById(c *gin.Context) {
 	c.IndentedJSON(http.StatusNotFound, id)
 }
 
+// @Summary          Update by Id
+// @Description      Update list
+// @Tags             lists
+// @Accept           json
+// @Produce          json
+// @Param            id path string true "List ID"
+// @Success          200 {array} List
+// @Router           /lists/{id} [POST]
 func updateById(c *gin.Context) {
 	id := c.Param("id")
 	var newAlbum List

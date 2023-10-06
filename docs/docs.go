@@ -36,6 +36,39 @@ const docTemplate = `{
             }
         },
         "/lists/{id}": {
+            "post": {
+                "description": "Update list",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "lists"
+                ],
+                "summary": "Update by Id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "List ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/main.List"
+                            }
+                        }
+                    }
+                }
+            },
             "delete": {
                 "description": "Delete list",
                 "consumes": [
@@ -61,6 +94,25 @@ const docTemplate = `{
                     "204": {
                         "description": "No Content"
                     }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "main.List": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string"
+                },
+                "birthday": {
+                    "type": "string"
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
                 }
             }
         }
