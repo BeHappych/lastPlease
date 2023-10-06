@@ -33,7 +33,38 @@ const docTemplate = `{
                         "description": "OK"
                     }
                 }
-            },
+            }
+        },
+        "/lists/{id}": {
+            "delete": {
+                "description": "Delete list",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "lists"
+                ],
+                "summary": "Delete by Id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "List ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/lists{id}": {
             "put": {
                 "description": "Update list",
                 "consumes": [
@@ -66,35 +97,6 @@ const docTemplate = `{
                                 "$ref": "#/definitions/main.List"
                             }
                         }
-                    }
-                }
-            }
-        },
-        "/lists/{id}": {
-            "delete": {
-                "description": "Delete list",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "lists"
-                ],
-                "summary": "Delete by Id",
-                "parameters": [
-                    {
-                        "type": "string",
-                        "description": "List ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "204": {
-                        "description": "No Content"
                     }
                 }
             }
