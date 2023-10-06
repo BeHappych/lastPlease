@@ -28,7 +28,7 @@ var database *sql.DB
 // @Tags             lists
 // @Accept           json
 // @Produce          json
-// @Success          200 {array} List
+// @Success          200
 // @Router           /lists [get]
 func getLists(c *gin.Context) {
 
@@ -69,7 +69,7 @@ func postList(c *gin.Context) {
 // @Accept           json
 // @Produce          json
 // @Param            id path string true "List ID"
-// @Success          204 {array} List
+// @Success          204
 // @Router           /lists/{id} [delete]
 func deleteById(c *gin.Context) {
 	id := c.Param("id")

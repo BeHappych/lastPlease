@@ -1,15 +1,3 @@
-definitions:
-  main.List:
-    properties:
-      address:
-        type: string
-      birthday:
-        type: string
-      full_name:
-        type: string
-      id:
-        type: string
-    type: object
 host: localhost:8080
 info:
   contact: {}
@@ -27,10 +15,6 @@ paths:
       responses:
         "200":
           description: OK
-          schema:
-            items:
-              $ref: '#/definitions/main.List'
-            type: array
       summary: Show all
       tags:
       - lists
@@ -50,10 +34,6 @@ paths:
       responses:
         "204":
           description: No Content
-          schema:
-            items:
-              $ref: '#/definitions/main.List'
-            type: array
       summary: Delete by Id
       tags:
       - lists

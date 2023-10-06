@@ -30,13 +30,7 @@ const docTemplate = `{
                 "summary": "Show all",
                 "responses": {
                     "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/main.List"
-                            }
-                        }
+                        "description": "OK"
                     }
                 }
             }
@@ -65,33 +59,8 @@ const docTemplate = `{
                 ],
                 "responses": {
                     "204": {
-                        "description": "No Content",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/main.List"
-                            }
-                        }
+                        "description": "No Content"
                     }
-                }
-            }
-        }
-    },
-    "definitions": {
-        "main.List": {
-            "type": "object",
-            "properties": {
-                "address": {
-                    "type": "string"
-                },
-                "birthday": {
-                    "type": "string"
-                },
-                "full_name": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
                 }
             }
         }
