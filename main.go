@@ -58,7 +58,7 @@ func getLists(c *gin.Context) {
 // @Accept           json
 // @Produce          json
 // @Success          200
-// @Param            newList body List true "List"
+// @Param            newList body List true "birthday input format - 1999-01-02"
 // @Router           /lists [post]
 func postList(c *gin.Context) {
 	var newList List

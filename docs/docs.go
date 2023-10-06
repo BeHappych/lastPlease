@@ -48,7 +48,7 @@ const docTemplate = `{
                 "summary": "New list",
                 "parameters": [
                     {
-                        "description": "List",
+                        "description": "birthday input format - 1999-01-02",
                         "name": "newList",
                         "in": "body",
                         "required": true,
