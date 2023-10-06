@@ -69,7 +69,7 @@ func postList(c *gin.Context) {
 // @Accept           json
 // @Produce          json
 // @Param            id path string true "List ID"
-// @Success          200 {string} id
+// @Success          200 {array} List
 // @Router           /lists/{id} [delete]
 func deleteById(c *gin.Context) {
 	id := c.Param("id")

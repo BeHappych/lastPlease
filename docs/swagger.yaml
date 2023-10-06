@@ -51,7 +51,9 @@ paths:
         "200":
           description: OK
           schema:
-            type: string
+            items:
+              $ref: '#/definitions/main.List'
+            type: array
       summary: Delete by Id
       tags:
       - lists
