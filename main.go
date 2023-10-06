@@ -84,7 +84,7 @@ func deleteById(c *gin.Context) {
 // @Produce          json
 // @Param            id path string true "List ID"
 // @Param            updateList body List true "List"
-// @Success          200 {array} List
+// @Success          201 {array} List
 // @Router           /lists/{id} [PUT]
 func updateById(c *gin.Context) {
 	id := c.Param("id")
@@ -95,7 +95,7 @@ func updateById(c *gin.Context) {
 	}
 
 	database.Exec("update Lists set Full_name = $1, Birthday = $2, Address = $3 where id = $4", updateList.Full_name, updateList.Birthday, updateList.Address, id)
-	c.IndentedJSON(http.StatusCreated, updateList.Birthday)
+	c.IndentedJSON(http.StatusCreated, id)
 
 }
 

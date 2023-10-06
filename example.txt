@@ -6,7 +6,7 @@ curl http://localhost:8080/lists \
     --include \
     --header "Content-Type: application/json" \
     --request "POST" \
-    --data '{"id": "1","full_name": "Ba","birthday": "1994-01-01","address": "Msk"}'
+    --data '{"id": "13","full_name": "Bar","birthday": "1994-01-01","address": "Msk"}'
 
 ###
 
@@ -14,12 +14,12 @@ curl http://localhost:8080/lists/1 \
     --include \
     --header "Content-Type: application/json" \
     --request "DELETE" \
-    --data '{"id": "1"}'
+    --data '{"id": "14"}'
 ###
-curl -X "DELETE" http://localhost:8080/lists/2
+curl -X "DELETE" http://localhost:8080/lists/14
 ###
-curl -X "PUT" http://localhost:8080/lists/3 \
+curl -X "PUT" http://localhost:8080/lists/13 \
     --include \
     --header "Content-Type: application/json" \
     --request "PUT" \
-    --data '{"full_name": "Ba","birthday": "1994-01-01","address": "Msk"}'
+    --data '{"full_name": "Ba","birthday": "1995-01-02","address": "Msk"}'
