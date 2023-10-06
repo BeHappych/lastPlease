@@ -33,9 +33,7 @@ const docTemplate = `{
                         "description": "OK"
                     }
                 }
-            }
-        },
-        "/lists/{id}": {
+            },
             "post": {
                 "description": "Update list",
                 "consumes": [
@@ -49,13 +47,6 @@ const docTemplate = `{
                 ],
                 "summary": "Update by Id",
                 "parameters": [
-                    {
-                        "type": "string",
-                        "description": "List ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    },
                     {
                         "description": "List",
                         "name": "updateList",
@@ -77,7 +68,9 @@ const docTemplate = `{
                         }
                     }
                 }
-            },
+            }
+        },
+        "/lists/{id}": {
             "delete": {
                 "description": "Delete list",
                 "consumes": [
