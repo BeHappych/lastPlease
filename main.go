@@ -8,7 +8,6 @@ import (
 
 	_ "github.com/lib/pq"
 
-	_ "github.com/BeHappych/lastPlease/docs"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
