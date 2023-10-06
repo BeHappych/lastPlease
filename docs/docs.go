@@ -39,7 +39,9 @@ const docTemplate = `{
                         }
                     }
                 }
-            },
+            }
+        },
+        "/lists/:id": {
             "delete": {
                 "description": "Delete list",
                 "consumes": [
@@ -54,13 +56,11 @@ const docTemplate = `{
                 "summary": "Delete by Id",
                 "parameters": [
                     {
-                        "description": "User ID",
+                        "type": "string",
+                        "description": "List ID",
                         "name": "id",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
+                        "in": "path",
+                        "required": true
                     }
                 ],
                 "responses": {
