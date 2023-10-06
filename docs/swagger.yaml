@@ -49,6 +49,7 @@ paths:
       summary: Delete by Id
       tags:
       - lists
+  /lists/{id}{full_name}{birthday}{address}:
     post:
       consumes:
       - application/json
