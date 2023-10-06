@@ -24,7 +24,7 @@ type List struct {
 var database *sql.DB
 
 // @Summary          Show all
-// @Description      get all
+// @Description      Get all
 // @Tags             lists
 // @Accept           json
 // @Produce          json
@@ -69,7 +69,7 @@ func postList(c *gin.Context) {
 // @Accept           json
 // @Produce          json
 // @Param            id path string true "List ID"
-// @Success          204 {string} id
+// @Success          404 {string} id
 // @Router           /lists/{id} [delete]
 func deleteById(c *gin.Context) {
 	id := c.Param("id")

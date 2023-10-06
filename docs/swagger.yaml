@@ -21,7 +21,7 @@ paths:
     get:
       consumes:
       - application/json
-      description: get all
+      description: Get all
       produces:
       - application/json
       responses:
@@ -48,8 +48,8 @@ paths:
       produces:
       - application/json
       responses:
-        "204":
-          description: No Content
+        "404":
+          description: Not Found
           schema:
             type: string
       summary: Delete by Id

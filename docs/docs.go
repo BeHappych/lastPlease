@@ -17,7 +17,7 @@ const docTemplate = `{
     "paths": {
         "/lists": {
             "get": {
-                "description": "get all",
+                "description": "Get all",
                 "consumes": [
                     "application/json"
                 ],
@@ -64,8 +64,8 @@ const docTemplate = `{
                     }
                 ],
                 "responses": {
-                    "204": {
-                        "description": "No Content",
+                    "404": {
+                        "description": "Not Found",
                         "schema": {
                             "type": "string"
                         }
