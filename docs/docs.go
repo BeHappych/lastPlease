@@ -79,29 +79,13 @@ const docTemplate = `{
                 "summary": "Update by Id",
                 "parameters": [
                     {
-                        "type": "string",
-                        "description": "List ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    },
-                    {
-                        "type": "string",
-                        "description": "Full_name",
-                        "name": "full_name",
-                        "in": "path"
-                    },
-                    {
-                        "type": "string",
-                        "description": "Birthday",
-                        "name": "birthday",
-                        "in": "path"
-                    },
-                    {
-                        "type": "string",
-                        "description": "Address",
-                        "name": "address",
-                        "in": "path"
+                        "description": "List",
+                        "name": "newAlbum",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/main.List"
+                        }
                     }
                 ],
                 "responses": {

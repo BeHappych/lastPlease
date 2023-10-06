@@ -55,23 +55,12 @@ paths:
       - application/json
       description: Update list
       parameters:
-      - description: List ID
-        in: path
-        name: id
+      - description: List
+        in: body
+        name: newAlbum
         required: true
-        type: string
-      - description: Full_name
-        in: path
-        name: full_name
-        type: string
-      - description: Birthday
-        in: path
-        name: birthday
-        type: string
-      - description: Address
-        in: path
-        name: address
-        type: string
+        schema:
+          $ref: '#/definitions/main.List'
       produces:
       - application/json
       responses:
