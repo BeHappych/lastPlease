@@ -24,12 +24,12 @@ var database *sql.DB
 
 // @Summary          List tables
 // @Description      get lists
+// @Tags             lists
 // @Accept           json
 // @Produce          json
 // @Param            lists body List true "User ID"
 // @Success          200 {array} List
 // @Router           /lists [get]
-
 func getLists(c *gin.Context) {
 
 	rows, err := database.Query("select * from Lists")
@@ -98,12 +98,12 @@ func main() {
 
 	router := gin.Default()
 
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+
 	router.GET("/lists", getLists)
 	router.POST("/lists", postList)
 	router.DELETE("/lists/:id", deleteById)
 	router.PUT("/lists/:id", updateById)
-
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	router.Run("localhost:8080")
 
