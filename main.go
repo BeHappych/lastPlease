@@ -28,7 +28,7 @@ var database *sql.DB
 // @Tags             lists
 // @Accept           json
 // @Produce          json
-// @Param            lists body List true "User ID"
+
 // @Success          200 {array} List
 // @Router           /lists [get]
 func getLists(c *gin.Context) {

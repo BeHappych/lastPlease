@@ -17,28 +17,6 @@ const docTemplate = `{
     "paths": {
         "/lists": {
             "get": {
-                "description": "get lists",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "lists"
-                ],
-                "summary": "List tables",
-                "parameters": [
-                    {
-                        "description": "User ID",
-                        "name": "lists",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/main.List"
-                        }
-                    }
-                ],
                 "responses": {
                     "200": {
                         "description": "OK",

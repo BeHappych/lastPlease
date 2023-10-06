@@ -19,18 +19,6 @@ info:
 paths:
   /lists:
     get:
-      consumes:
-      - application/json
-      description: get lists
-      parameters:
-      - description: User ID
-        in: body
-        name: lists
-        required: true
-        schema:
-          $ref: '#/definitions/main.List'
-      produces:
-      - application/json
       responses:
         "200":
           description: OK
@@ -38,7 +26,4 @@ paths:
             items:
               $ref: '#/definitions/main.List'
             type: array
-      summary: List tables
-      tags:
-      - lists
 swagger: "2.0"
