@@ -82,19 +82,19 @@ func deleteById(c *gin.Context) {
 // @Tags             lists
 // @Accept           json
 // @Produce          json
-// @Param            newAlbum body List true "List"
+// @Param            updateList body List true "List"
 // @Success          200 {array} List
-// @Router           /lists/{id}{full_name}{birthday}{address} [POST]
+// @Router           /lists/{id} [POST]
 func updateById(c *gin.Context) {
 	id := c.Param("id")
-	var newAlbum List
+	var updateList List
 
-	if err := c.BindJSON(&newAlbum); err != nil {
+	if err := c.BindJSON(&updateList); err != nil {
 		return
 	}
 
-	database.Exec("update Lists set Full_name = $1, Birthday = $2, Address = $3 where id = $4", newAlbum.Full_name, newAlbum.Birthday, newAlbum.Address, id)
-	c.IndentedJSON(http.StatusCreated, newAlbum.Birthday)
+	database.Exec("update Lists set Full_name = $1, Birthday = $2, Address = $3 where id = $4", updateList.Full_name, updateList.Birthday, updateList.Address, id)
+	c.IndentedJSON(http.StatusCreated, updateList.Birthday)
 
 }
 

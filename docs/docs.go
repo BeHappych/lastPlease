@@ -36,6 +36,41 @@ const docTemplate = `{
             }
         },
         "/lists/{id}": {
+            "post": {
+                "description": "Update list",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "lists"
+                ],
+                "summary": "Update by Id",
+                "parameters": [
+                    {
+                        "description": "List",
+                        "name": "updateList",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/main.List"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/main.List"
+                            }
+                        }
+                    }
+                }
+            },
             "delete": {
                 "description": "Delete list",
                 "consumes": [
@@ -60,43 +95,6 @@ const docTemplate = `{
                 "responses": {
                     "204": {
                         "description": "No Content"
-                    }
-                }
-            }
-        },
-        "/lists/{id}{full_name}{birthday}{address}": {
-            "post": {
-                "description": "Update list",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "lists"
-                ],
-                "summary": "Update by Id",
-                "parameters": [
-                    {
-                        "description": "List",
-                        "name": "newAlbum",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/main.List"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/main.List"
-                            }
-                        }
                     }
                 }
             }
