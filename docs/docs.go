@@ -58,10 +58,21 @@ const docTemplate = `{
                     },
                     {
                         "type": "string",
+                        "description": "Full_name",
+                        "name": "full_name",
+                        "in": "path"
+                    },
+                    {
+                        "type": "string",
                         "description": "Birthday",
                         "name": "birthday",
-                        "in": "path",
-                        "required": true
+                        "in": "path"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Address",
+                        "name": "address",
+                        "in": "path"
                     }
                 ],
                 "responses": {
