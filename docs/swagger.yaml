@@ -49,7 +49,7 @@ paths:
       summary: Delete by Id
       tags:
       - lists
-  /lists{updateList.id}:
+  /lists{id}:
     put:
       consumes:
       - application/json
