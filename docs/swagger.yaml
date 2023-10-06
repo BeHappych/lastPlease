@@ -59,6 +59,11 @@ paths:
         name: id
         required: true
         type: string
+      - description: Birthday
+        in: path
+        name: birthday
+        required: true
+        type: string
       produces:
       - application/json
       responses:

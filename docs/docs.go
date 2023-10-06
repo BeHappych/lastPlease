@@ -55,6 +55,13 @@ const docTemplate = `{
                         "name": "id",
                         "in": "path",
                         "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Birthday",
+                        "name": "birthday",
+                        "in": "path",
+                        "required": true
                     }
                 ],
                 "responses": {
