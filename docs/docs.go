@@ -79,6 +79,13 @@ const docTemplate = `{
                 "summary": "Update by Id",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "List ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
                         "description": "List",
                         "name": "updateList",
                         "in": "body",

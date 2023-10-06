@@ -82,6 +82,7 @@ func deleteById(c *gin.Context) {
 // @Tags             lists
 // @Accept           json
 // @Produce          json
+// @Param            id path string true "List ID"
 // @Param            updateList body List true "List"
 // @Success          200 {array} List
 // @Router           /lists{updateList.id} [PUT]
