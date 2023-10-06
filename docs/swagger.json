@@ -27,7 +27,7 @@
                     }
                 }
             },
-            "post": {
+            "put": {
                 "description": "Update list",
                 "consumes": [
                     "application/json"

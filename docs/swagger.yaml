@@ -30,7 +30,7 @@ paths:
       summary: Show all
       tags:
       - lists
-    post:
+    put:
       consumes:
       - application/json
       description: Update list

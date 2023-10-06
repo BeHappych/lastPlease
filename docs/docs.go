@@ -34,7 +34,7 @@ const docTemplate = `{
                     }
                 }
             },
-            "post": {
+            "put": {
                 "description": "Update list",
                 "consumes": [
                     "application/json"
