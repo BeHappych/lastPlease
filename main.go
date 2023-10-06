@@ -58,7 +58,7 @@ func getLists(c *gin.Context) {
 // @Accept           json
 // @Produce          json
 // @Success          200
-// @Param            newList body List true "birthday input format - 1999-01-02"
+// @Param            newList body List true "Birthday input format - 1999-01-02"
 // @Router           /lists [post]
 func postList(c *gin.Context) {
 	var newList List
@@ -91,7 +91,7 @@ func deleteById(c *gin.Context) {
 // @Accept           json
 // @Produce          json
 // @Param            id path string true "List ID"
-// @Param            updateList body List true "List"
+// @Param            updateList body List true "Birthday input format - 1999-01-02"
 // @Success          201 {array} List
 // @Router           /lists/{id} [PUT]
 func updateById(c *gin.Context) {

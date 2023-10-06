@@ -35,7 +35,7 @@ paths:
       - application/json
       description: Add new list
       parameters:
-      - description: birthday input format - 1999-01-02
+      - description: Birthday input format - 1999-01-02
         in: body
         name: newList
         required: true
@@ -78,7 +78,7 @@ paths:
         name: id
         required: true
         type: string
-      - description: List
+      - description: Birthday input format - 1999-01-02
         in: body
         name: updateList
         required: true
