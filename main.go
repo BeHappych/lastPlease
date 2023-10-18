@@ -8,12 +8,13 @@ import (
 
 	_ "github.com/lib/pq"
 
-	_ "github.com/BeHappych/lastPlease/app/docs"
+	_ "github.com/BeHappych/lastPlease/docs"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
+// i
 type List struct {
 	Id        string `json:"id"`
 	Full_name string `json:"full_name"`
