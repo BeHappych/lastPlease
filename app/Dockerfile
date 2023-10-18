@@ -1,8 +1,11 @@
 FROM golang:alpine
 
-WORKDIR /app
+RUN go version
+ENV GOPATH=/
 
-COPY . .
+COPY ./ ./
 
+RUN go mod download
+RUN go build -o lastplease ./main.go
 
-CMD ["golang", "main.go"]
+CMD ["./lastplease"]
