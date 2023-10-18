@@ -14,7 +14,6 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
-// i
 type List struct {
 	Id        string `json:"id"`
 	Full_name string `json:"full_name"`

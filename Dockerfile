@@ -1,11 +1,7 @@
-FROM golang:alpine
+FROM golang
 
-RUN go version
-ENV GOPATH=/
+WORKDIR /app
 
-COPY ./ ./
+RUN go get github.com/BeHappych/lastPlease/docs
 
-RUN go mod download
-RUN go build -o lastplease ./main.go
-
-CMD ["./lastplease"]
+CMD ["lastplease", "-command=./app"]
